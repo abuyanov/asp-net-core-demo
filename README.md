@@ -1,6 +1,8 @@
 # Atalasoft Web Document Viewer & Web Capture Service demo application based on ASP.NET Core
 Demo application shows basic usage of Web Document Viewer(WDV) and Web Capture Service(WCS) components of DotImage product using ASP.NET Core middlewares.
 
+![](https://atalasoft.visualstudio.com/_apis/public/build/definitions/789e0a22-6f04-4fac-91a5-ccc70df2a1f1/11/badge)
+
 ## Description
 
 This solution provides demo applications that demonstrate how to use WDV and WCS DotImage middlewares and how to create ASP.NET Core applications with response caching, compression, usage of static files and CORS support.
