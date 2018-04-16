@@ -2,6 +2,6 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "web-document-viewer": "11.0.0"
+    "web-document-viewer": "11.0.6"
   }
 }
