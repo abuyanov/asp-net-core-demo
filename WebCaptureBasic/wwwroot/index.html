@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Scripts for Web Viewing -->
+    <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="lib/raphael/raphael.min.js"></script>
+    <script src="lib/web-document-viewer/atalaWebDocumentViewer.js" type="text/javascript"></script>
+
+    <!-- Script for Web Capture -->
+    <script src="lib/web-capture-service/atalaWebCapture.js" type="text/javascript"></script>
+
+    <!-- Style for Web Viewer -->
+    <link href="lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <link href="lib/web-document-viewer/atalaWebDocumentViewer.css" rel="stylesheet" />
+
+    <!-- Demo application script -->
+    <script type="text/javascript">
+        // Initialize Web Scanning and Web Viewing
+        $(function () {
+            try {
+                var viewer = new Atalasoft.Controls.WebDocumentViewer({
+                    parent: $('.atala-document-container'),
+                    toolbarparent: $('.atala-document-toolbar'),
+                    serverurl: 'wdv'
+                });
+                Atalasoft.Controls.Capture.WebScanning.initialize({
+                    handlerUrl: 'wcs',
+                    onScanClientReady: function (eventName, eventObj) {
+                        console.log("Scan Client Ready");
+                        //Set encryption key for scan/import results located in persistent store in the UserProfile folder
+                        Atalasoft.Controls.Capture.WebScanning.LocalFile.setEncryptionKey("foobar");
+                    },
+                    onImageAcquired: function (eventName, eventObj) {
+                        console.log("Image Acquired");
+                        // Remove image as temporary result
+                        eventObj.discard = true;
+                        // Use LocalFile API for upload scan result to server with specified settings
+                        Atalasoft.Controls.Capture.WebScanning.LocalFile.asBase64String(eventObj.localFile,
+                            "jpg",
+                            {
+                                quality: 5
+                            },
+                            function (data) { Atalasoft.Controls.Capture.UploadToCaptureServer.uploadToServer(data); });
+                    },
+                    onUploadCompleted: function (eventName, eventObj) {
+                        console.log('Upload Completed: ' + eventObj.success);
+                        if (eventObj.success) {
+                            console.log("atala-capture-upload/" + eventObj.documentFilename);
+                            viewer.OpenUrl("atala-capture-upload/" + eventObj.documentFilename);
+                            Atalasoft.Controls.Capture.CaptureService.documentFilename = eventObj.documentFilename;
+                        }
+                    },
+                    scanningOptions: { scanner: $('#scannerList').val(), pixelType: 0, deliverables: { localFile: { format: "tif" } } }
+                });
+            }
+            catch (error) {
+                alert('Thrown error: ' + error.description);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>
+        Select Scanner:
+        <select class="atala-scanner-list" disabled="disabled" name="scannerList" style="width: 22em">
+            <option selected="selected">(no scanners available)</option>
+        </select>
+    </p>
+    <p>
+        <input type="button" class="atala-scan-button" value="Scan" />
+        <input type="button" class="atala-local-file-import-button" value="Import" />
+    </p>
+    <div>
+        <div class="atala-document-toolbar" style="width: 670px;"></div>
+        <div class="atala-document-container" style="width: 670px; height: 500px;"></div>
+    </div>
+</body>
+</html>

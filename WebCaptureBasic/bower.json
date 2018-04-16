@@ -1,0 +1,8 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "web-capture-service": "11.0.0",
+    "web-document-viewer": "11.0.0"
+  }
+}
