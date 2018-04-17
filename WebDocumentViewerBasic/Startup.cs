@@ -68,7 +68,7 @@ namespace WebDocumentViewerBasic
                     await next();
                 });
 
-                wdvApp.RunWebDocumentViewerMiddleware();
+                wdvApp.RunWebDocumentViewerMiddleware(new DemoCallbacks(env.WebRootPath));
             });
         }
     }
