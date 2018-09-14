@@ -13,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.0.0.6432" />
-    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.1" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.6" />
+    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.0.0.10507" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.ResponseCaching" Version="1.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="1.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.3" />
