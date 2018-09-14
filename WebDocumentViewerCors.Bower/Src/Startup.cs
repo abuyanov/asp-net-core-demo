@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace WebDocumentViewerCors
+namespace WebDocumentViewerCors.Bower.Src
 {
     public class Startup
     {

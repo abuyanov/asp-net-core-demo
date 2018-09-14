@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebDocumentViewerCors
+namespace WebDocumentViewerBasic.Npm.Src
 {
     public class Program
     {
@@ -12,12 +12,6 @@ namespace WebDocumentViewerCors
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-#if !DEBUG
-// I want to use specific host and port number,
-// when we launch this application built in
-// the 'Release' configuration.
-                .UseUrls($"http://localhost:5000")
-#endif
                 .UseStartup<Startup>()
                 .Build();
 

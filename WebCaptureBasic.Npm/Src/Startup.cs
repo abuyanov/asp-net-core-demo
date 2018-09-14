@@ -1,12 +1,12 @@
-﻿using Atalasoft.Imaging.WebControls.Core;
+﻿using System;
+using Atalasoft.Imaging.WebControls.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System;
 
-namespace WebCaptureBasic
+namespace WebCaptureBasic.Npm.Src
 {
     public class Startup
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebCaptureBasic
+namespace WebCaptureBasic.Npm.Src
 {
     public class Program
     {
@@ -14,6 +14,5 @@ namespace WebCaptureBasic
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
-
     }
 }

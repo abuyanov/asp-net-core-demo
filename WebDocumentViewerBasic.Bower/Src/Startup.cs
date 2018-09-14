@@ -1,4 +1,6 @@
-﻿using Atalasoft.Imaging.Codec;
+﻿using System;
+using System.Linq;
+using Atalasoft.Imaging.Codec;
 using Atalasoft.Imaging.Codec.Pdf;
 using Atalasoft.Imaging.WebControls.Core;
 using Microsoft.AspNetCore.Builder;
@@ -8,10 +10,8 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
-using System;
-using System.Linq;
 
-namespace WebDocumentViewerBasic
+namespace WebDocumentViewerBasic.Bower.Src
 {
     public class Startup
     {

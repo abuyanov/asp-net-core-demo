@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using System.IO;
+﻿using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
-namespace WebCaptureBasic
+namespace WebDocumentViewerCors.Bower.Src
 {
     public class Program
     {
@@ -10,6 +10,12 @@ namespace WebCaptureBasic
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
+#if !DEBUG
+                // I want to use specific host and port number,
+                // when we launch this application built in
+                // the 'Release' configuration.
+                .UseUrls($"http://localhost:5000")
+#endif
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
