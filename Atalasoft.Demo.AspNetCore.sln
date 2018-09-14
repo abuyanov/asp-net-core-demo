@@ -3,11 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCaptureBasic", "WebCaptureBasic\WebCaptureBasic.csproj", "{75398BDC-1271-4297-8559-69A8EF52BD93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCaptureBasic.Bower", "WebCaptureBasic.Bower\WebCaptureBasic.Bower.csproj", "{75398BDC-1271-4297-8559-69A8EF52BD93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDocumentViewerBasic", "WebDocumentViewerBasic\WebDocumentViewerBasic.csproj", "{B259BA00-7551-4634-AB89-04AD70DE222E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDocumentViewerBasic.Bower", "WebDocumentViewerBasic.Bower\WebDocumentViewerBasic.Bower.csproj", "{B259BA00-7551-4634-AB89-04AD70DE222E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDocumentViewerCors", "WebDocumentViewerCors\WebDocumentViewerCors.csproj", "{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDocumentViewerCors.Bower", "WebDocumentViewerCors.Bower\WebDocumentViewerCors.Bower.csproj", "{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET Core 1.x + bower", "ASP.NET Core 1.x + bower", "{F35B681F-61F5-4C83-8878-EC81E80E577B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET Core 2.x + npm", "ASP.NET Core 2.x + npm", "{767B7A70-1584-4FF6-8E1D-FFCF0B6F2600}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCaptureBasic.Npm", "WebCaptureBasic.Npm\WebCaptureBasic.Npm.csproj", "{A8F0FE48-7649-468E-9640-3DF5AA73FE0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDocumentViewerBasic.Npm", "WebDocumentViewerBasic.Npm\WebDocumentViewerBasic.Npm.csproj", "{4A8D1D34-A732-4A99-A5D5-17D205A6E580}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebDocumentViewerCors.Npm", "WebDocumentViewerCors.Npm\WebDocumentViewerCors.Npm.csproj", "{344B605E-430C-444E-BF9A-44AE16B2E5E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,23 +37,31 @@ Global
 		{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F0FE48-7649-468E-9640-3DF5AA73FE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F0FE48-7649-468E-9640-3DF5AA73FE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F0FE48-7649-468E-9640-3DF5AA73FE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F0FE48-7649-468E-9640-3DF5AA73FE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8D1D34-A732-4A99-A5D5-17D205A6E580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8D1D34-A732-4A99-A5D5-17D205A6E580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8D1D34-A732-4A99-A5D5-17D205A6E580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8D1D34-A732-4A99-A5D5-17D205A6E580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344B605E-430C-444E-BF9A-44AE16B2E5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344B605E-430C-444E-BF9A-44AE16B2E5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344B605E-430C-444E-BF9A-44AE16B2E5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344B605E-430C-444E-BF9A-44AE16B2E5E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://tfs.kofax.com:8080/tfs/products
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = WebCaptureBasic\\WebCaptureBasic.csproj
-		SccProjectName1 = WebCaptureBasic
-		SccLocalPath1 = WebCaptureBasic
-		SccProjectUniqueName2 = WebDocumentViewerBasic\\WebDocumentViewerBasic.csproj
-		SccProjectName2 = WebDocumentViewerBasic
-		SccLocalPath2 = WebDocumentViewerBasic
-		SccProjectUniqueName3 = WebDocumentViewerCors\\WebDocumentViewerCors.csproj
-		SccProjectName3 = WebDocumentViewerCors
-		SccLocalPath3 = WebDocumentViewerCors
+	GlobalSection(NestedProjects) = preSolution
+		{75398BDC-1271-4297-8559-69A8EF52BD93} = {F35B681F-61F5-4C83-8878-EC81E80E577B}
+		{B259BA00-7551-4634-AB89-04AD70DE222E} = {F35B681F-61F5-4C83-8878-EC81E80E577B}
+		{D0ABF182-CF18-4A41-85F8-95CD9AE3F7B8} = {F35B681F-61F5-4C83-8878-EC81E80E577B}
+		{A8F0FE48-7649-468E-9640-3DF5AA73FE0D} = {767B7A70-1584-4FF6-8E1D-FFCF0B6F2600}
+		{4A8D1D34-A732-4A99-A5D5-17D205A6E580} = {767B7A70-1584-4FF6-8E1D-FFCF0B6F2600}
+		{344B605E-430C-444E-BF9A-44AE16B2E5E5} = {767B7A70-1584-4FF6-8E1D-FFCF0B6F2600}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F934D38C-51D0-4749-A072-F40417F510F0}
 	EndGlobalSection
 EndGlobal
