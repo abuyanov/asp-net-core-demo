@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebDocumentViewerBasic.Bower.Src
+namespace WebDocumentViewerBasic.Bower
 {
     public class Program
     {

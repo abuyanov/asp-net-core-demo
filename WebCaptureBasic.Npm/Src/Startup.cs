@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace WebCaptureBasic.Npm.Src
+namespace WebCaptureBasic.Npm
 {
     public class Startup
     {
@@ -18,9 +18,9 @@ namespace WebCaptureBasic.Npm.Src
             // in this case we simply set maximum values, however you can set more strict values for your server.
             services.Configure<FormOptions>(opt =>
             {
-                opt.BufferBodyLengthLimit = Int64.MaxValue;
-                opt.ValueLengthLimit = Int32.MaxValue;
-                opt.MultipartBodyLengthLimit = Int64.MaxValue;
+                opt.BufferBodyLengthLimit = long.MaxValue;
+                opt.ValueLengthLimit = int.MaxValue;
+                opt.MultipartBodyLengthLimit = long.MaxValue;
             });
         }
 

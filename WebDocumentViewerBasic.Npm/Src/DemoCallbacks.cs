@@ -6,7 +6,7 @@ using Atalasoft.Imaging.WebControls;
 using Atalasoft.Imaging.WebControls.Core;
 using Atalasoft.Imaging.WebControls.Text;
 
-namespace WebDocumentViewerBasic.Npm.Src
+namespace WebDocumentViewerBasic.Npm
 {
     public class DemoCallbacks : WebDocumentViewerCallbacks
     {

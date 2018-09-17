@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebCaptureBasic.Bower.Src
+namespace WebCaptureBasic.Bower
 {
     public class Program
     {

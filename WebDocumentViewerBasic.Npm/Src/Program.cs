@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebDocumentViewerBasic.Npm.Src
+namespace WebDocumentViewerBasic.Npm
 {
     public class Program
     {

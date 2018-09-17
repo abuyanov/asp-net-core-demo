@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 
-namespace WebDocumentViewerBasic.Npm.Src
+namespace WebDocumentViewerBasic.Npm
 {
     public class Startup
     {

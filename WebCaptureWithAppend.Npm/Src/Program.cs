@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace WebCaptureBasic.Npm
+namespace WebCaptureWithAppend.Npm
 {
     public class Program
     {
