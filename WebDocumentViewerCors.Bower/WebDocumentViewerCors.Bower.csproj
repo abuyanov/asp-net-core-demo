@@ -13,7 +13,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.0.0.10507" />
+    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.1.0.279" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="1.1.2" />

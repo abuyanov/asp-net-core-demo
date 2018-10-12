@@ -3,6 +3,10 @@
   "private": true,
   "dependencies": {
     "web-capture-service": "11.0.10",
-    "web-document-viewer": "11.0.10"
+    "web-document-viewer": "11.0.10",
+    "clipboard": "v2.0.1"
+  },
+  "resolutions": {
+    "clipboard": "v2.0.1"
   }
 }
