@@ -24,10 +24,10 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Atalasoft.dotImage.Office.x86" Version="11.0.0.10507" />
-    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.0.0.10507" />
+    <PackageReference Include="Atalasoft.dotImage.Office.x86" Version="11.1.0.279" />
+    <PackageReference Include="Atalasoft.dotImage.WebControls.Core.x86" Version="11.1.0.279" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.4.1" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
   </ItemGroup>
 
