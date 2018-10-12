@@ -5,55 +5,12 @@
     <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="lib/raphael/raphael.min.js"></script>
+    <script src="lib/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
     <script src="lib/web-document-viewer/atalaWebDocumentViewer.js" type="text/javascript"></script>
-
+    <script src="lib/wdvmanager.js" type="text/javascript"></script>
     <!-- Style for Web Viewer -->
     <link href="lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
     <link href="lib/web-document-viewer/atalaWebDocumentViewer.css" rel="stylesheet" />
-
-    <script type="text/javascript">
-
-        var _viewer;
-
-        // Show status and error messages
-        function appendStatus(msg) {
-            var stat = $("#status");
-            stat.append(msg + "<br>");
-        }
-
-        // Initialize Web Viewing
-        $(function () {
-            try {
-                // Initialize Web Document Viewer
-                _viewer = new Atalasoft.Controls.WebDocumentViewer({
-                    parent: $('.atala-document-container'),
-                    toolbarparent: $('.atala-document-toolbar'),
-                    'allowforms': true,
-                    allowannotations: true,
-                    'savepath': '.',
-                    'annotations': {
-                        'atala_iuname': 'mm'
-                    },
-                    serverurl: 'wdv'
-                });
-
-                // Uncomment the following 2 lines if the toolbar buttons should be displayed without text
-                //$('.atala-ui-button .ui-button-text').html('&nbsp;');
-                //$('.atala-ui-button').css({ height: '28px', width: '28px' });
-
-                loadFile();
-
-            } catch (error) {
-                appendStatus("Thrown error: " + error.description);
-            }
-        });
-
-
-        function loadFile() {
-            _viewer.OpenUrl($('#FileSelectionList').val(),'');
-        }
-
-    </script>
 
 </head>
 <body>
@@ -66,12 +23,31 @@
             <option value="images/Test.pdf">Test.pdf</option>
         </select>
 
-        <div>
-            <div class="atala-document-toolbar" style="width: 1200px;"></div>
-            <div class="atala-document-container" style="width: 1200px; height: 600px;"></div>
-        </div>
+        <table border="0" style="width: 820px;" cellspacing="0" >
+            <tr>
+                <td bgcolor="#DCDCDC" style="font-family:Verdana,Arial,sans-serif; text-align:center; font-size:0.8em">
+                    Thumbnails
+                </td>
+                <td>
+                    <div class="atala-document-toolbar" id="Toolbar" style="width: 900px;" disabled="disabled"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    <div class="atala-thumbnailer-container" style="width: 120px; height: 600px;"></div>
+                </td>
+                <td>
+                    
+                    <div class="atala-document-container" style="width: 900px; height: 600px;"></div>
+                </td>
+            </tr>
+        </table>
 
-        <div id="status"></div>
+        <div>
+            <h3>Status:</h3>
+            <div  id="status" style="width:670px; height:150px; overflow:scroll; border:solid 1px #CCC;"></div>
+        </div>
 
     </form>
 </body>
